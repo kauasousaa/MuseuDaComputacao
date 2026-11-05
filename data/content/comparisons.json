@@ -1,0 +1,44 @@
+[
+  {
+    "theme": "Ambiente de código",
+    "past": "Bloco de Notas, edit do MS-DOS ou a tela azul do Turbo Pascal. Sem cores, sem autocompletar e com o compilador apontando só o primeiro erro.",
+    "pastPeriod": "anos 80 e 90",
+    "present": "VS Code e IDEs modernas com realce de sintaxe, autocompletar, refatoração automática, terminal integrado e IA sugerindo o próximo trecho.",
+    "curiosity": "O Turbo Pascal 1.0 cabia em menos de 40 KB e compilava milhares de linhas por minuto."
+  },
+  {
+    "theme": "Aprender a programar",
+    "past": "Livros grossos, apostilas, manuais impressos e revistas com listagens de código para digitar linha por linha.",
+    "pastPeriod": "até os anos 2000",
+    "present": "Documentação online, vídeos, cursos gratuitos, fóruns, Stack Overflow e assistentes de IA que explicam o código na hora.",
+    "curiosity": "Um erro de digitação em uma listagem de revista podia custar uma tarde inteira de depuração."
+  },
+  {
+    "theme": "Compartilhar código",
+    "past": "Entregar o trabalho em disquete ou CD, mandar .zip por e-mail e torcer para ninguém sobrescrever a versão do colega.",
+    "pastPeriod": "anos 90 e 2000",
+    "present": "Repositórios Git no GitHub, pull requests, revisão de código e integração contínua rodando testes a cada commit.",
+    "curiosity": "Antes do Git, era comum ter pastas como 'trabalho_final', 'trabalho_final2' e 'trabalho_final_AGORA_VAI'."
+  },
+  {
+    "theme": "Executar um programa",
+    "past": "Perfurar cartões, entregar a pilha ao operador do computador central e buscar o resultado impresso horas (ou um dia) depois.",
+    "pastPeriod": "anos 50 a 70",
+    "present": "Compilar em segundos, rodar localmente, em contêiner ou publicar na nuvem com um único comando.",
+    "curiosity": "Derrubar uma caixa de cartões perfurados era um desastre: por isso muita gente desenhava uma diagonal na lateral da pilha."
+  },
+  {
+    "theme": "Depurar erros",
+    "past": "PRINT e printf espalhados pelo código, dumps de memória impressos em papel e muita paciência.",
+    "pastPeriod": "até os anos 90",
+    "present": "Depuradores com breakpoints, inspeção de variáveis em tempo real, logs centralizados e ferramentas de observabilidade.",
+    "curiosity": "Em 1947, a equipe de Grace Hopper encontrou uma mariposa presa em um relé do Mark II e a colou no diário de bordo como 'primeiro bug real encontrado'."
+  },
+  {
+    "theme": "Conexão com a internet",
+    "past": "Internet discada a 56 kbps, o barulho do modem, a linha telefônica ocupada e a espera para baixar uma única música.",
+    "pastPeriod": "anos 90",
+    "present": "Fibra óptica e Wi-Fi com velocidades de centenas de megabits, sempre conectados, inclusive no celular.",
+    "curiosity": "Muita gente só se conectava depois da meia-noite ou aos fins de semana, quando o pulso telefônico era mais barato."
+  }
+]

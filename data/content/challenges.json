@@ -1,0 +1,72 @@
+[
+  {
+    "id": "msdos",
+    "snippet": "C:\\> FORMAT A: /S\nInsira um novo disco na unidade A:\ne pressione ENTER quando pronto...",
+    "answer": "MS-DOS formatando um disquete",
+    "period": "1981 – 1995",
+    "explanation": "O /S copiava os arquivos de sistema, criando um disquete de boot. Quem nunca guardou um desses na gaveta para emergências?"
+  },
+  {
+    "id": "basicLoop",
+    "snippet": "10 PRINT \"OLA MUNDO\"\n20 GOTO 10",
+    "answer": "BASIC com GOTO",
+    "period": "1964 – anos 80",
+    "explanation": "O clássico laço infinito digitado nos computadores de demonstração das lojas. Você pode rodar ele de verdade na seção de linguagens!"
+  },
+  {
+    "id": "marquee",
+    "snippet": "<marquee><blink>\n  Bem-vindo à minha home page!\n</blink></marquee>\n<img src=\"em_construcao.gif\">",
+    "answer": "HTML dos anos 90",
+    "period": "1995 – 2002",
+    "explanation": "Texto rolando, piscando e o eterno GIF de 'em construção'. As tags marquee e blink nunca fizeram parte oficial do padrão HTML."
+  },
+  {
+    "id": "assembly",
+    "snippet": "MOV AH, 09h\nMOV DX, OFFSET msg\nINT 21h",
+    "answer": "Assembly x86 no DOS",
+    "period": "anos 80 e 90",
+    "explanation": "A função 09h da interrupção 21h do DOS imprimia um texto terminado em '$'. Programar assim era conversar direto com o processador."
+  },
+  {
+    "id": "cobol",
+    "snippet": "IDENTIFICATION DIVISION.\nPROGRAM-ID. FOLHA-PAGTO.\nPROCEDURE DIVISION.\n    DISPLAY 'PROCESSANDO...'.",
+    "answer": "COBOL",
+    "period": "1959 – hoje",
+    "explanation": "Ainda roda em bancos e governos. Programadores COBOL continuam disputados justamente por serem raros."
+  },
+  {
+    "id": "turboPascal",
+    "snippet": "uses crt;\nbegin\n  clrscr;\n  writeln('Pressione uma tecla...');\n  readkey;\nend.",
+    "answer": "Turbo Pascal com a unit CRT",
+    "period": "1983 – anos 90",
+    "explanation": "clrscr limpava a tela e readkey segurava o programa aberto. Esse foi o primeiro código de muita gente em cursos técnicos e faculdades."
+  },
+  {
+    "id": "hayes",
+    "snippet": "ATZ\nOK\nATDT 08007012345\nCONNECT 33600",
+    "answer": "Comandos AT de um modem discado",
+    "period": "1981 – anos 2000",
+    "explanation": "ATDT significava 'atenção, discar por tom'. Depois vinha aquela sinfonia de chiados que você pode ouvir no início do site."
+  },
+  {
+    "id": "vb6",
+    "snippet": "Private Sub Command1_Click()\n    On Error Resume Next\n    MsgBox \"Olá!\", vbInformation\nEnd Sub",
+    "answer": "Visual Basic 6",
+    "period": "1998 – anos 2000",
+    "explanation": "Arrastar um botão, dar dois cliques e programar o evento. O 'On Error Resume Next' era a forma mais elegante de ignorar todos os problemas."
+  },
+  {
+    "id": "svn",
+    "snippet": "$ svn update\n$ svn commit -m \"agora vai\"\nsvn: Commit failed: out of date",
+    "answer": "Subversion (SVN)",
+    "period": "2000 – 2010",
+    "explanation": "O controle de versão centralizado reinou antes do Git. Conflitos de merge eram resolvidos com muito medo."
+  },
+  {
+    "id": "php",
+    "snippet": "<?php\n$r = mysql_query(\"SELECT * FROM usuarios\");\nwhile ($l = mysql_fetch_array($r)) {\n  echo $l['nome'] . \"<br>\";\n}\n?>",
+    "answer": "PHP antigo com mysql_query",
+    "period": "anos 2000",
+    "explanation": "Funções mysql_* foram removidas no PHP 7. Misturar HTML, SQL e PHP no mesmo arquivo era o padrão da época."
+  }
+]

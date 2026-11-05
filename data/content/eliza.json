@@ -1,0 +1,177 @@
+{
+  "reflections": {
+    "eu": "você",
+    "meu": "seu",
+    "minha": "sua",
+    "meus": "seus",
+    "minhas": "suas",
+    "me": "te",
+    "mim": "você",
+    "comigo": "com você",
+    "sou": "é",
+    "estou": "está",
+    "era": "era",
+    "você": "eu",
+    "seu": "meu",
+    "sua": "minha",
+    "seus": "meus",
+    "suas": "minhas"
+  },
+  "rules": [
+    {
+      "pattern": "\\b(tchau|adeus|até logo|até mais)\\b",
+      "responses": [
+        "Até logo. Obrigada por visitar o Museu da Computação.",
+        "Tchau! Não esqueça de deixar sua memória no mural."
+      ]
+    },
+    {
+      "pattern": "^(olá|ola|oi|bom dia|boa tarde|boa noite|e aí)\\b",
+      "responses": [
+        "Olá. Eu sou a ELIZA, criada em 1966 no MIT. Sobre o que você gostaria de conversar?",
+        "Oi. Como você está se sentindo hoje?"
+      ]
+    },
+    {
+      "pattern": "\\b(você|vc) (é|e) (?:uma? )?(?:ia|inteligente|humana|real|robô|robo)\\b",
+      "responses": [
+        "Eu sou só algumas dezenas de regras de padrões de texto. Mesmo assim, você acha que eu entendo o que você diz?",
+        "Por que importa para você se eu sou inteligente?"
+      ]
+    },
+    {
+      "pattern": "\\b(chatgpt|gpt|llm|inteligência artificial|inteligencia artificial|ia)\\b",
+      "responses": [
+        "Os modelos de hoje aprendem com bilhões de exemplos. Eu só procuro palavras-chave. O que você pensa dessa diferença?",
+        "Fale mais sobre o que você pensa da inteligência artificial."
+      ]
+    },
+    {
+      "pattern": "\\blembr\\w* (.+)",
+      "responses": [
+        "O que faz você se lembrar {0} justamente agora?",
+        "Que outras coisas vêm à cabeça quando você se lembra {0}?",
+        "Que sentimento você tem quando se lembra {0}?"
+      ]
+    },
+    {
+      "pattern": "\\beu (?:sinto|me sinto) (.+)",
+      "responses": [
+        "Por que você se sente {0}?",
+        "Com que frequência você se sente {0}?",
+        "Você gosta de se sentir {0}?"
+      ]
+    },
+    {
+      "pattern": "\\beu estou (.+)",
+      "responses": [
+        "Há quanto tempo você está {0}?",
+        "Por que você está {0}?",
+        "Você acredita que é normal estar {0}?"
+      ]
+    },
+    {
+      "pattern": "\\beu sou (.+)",
+      "responses": [
+        "Você gosta de ser {0}?",
+        "Por que você diz que é {0}?",
+        "Há quanto tempo você é {0}?"
+      ]
+    },
+    {
+      "pattern": "\\beu preciso (?:de )?(.+)",
+      "responses": [
+        "Por que você precisa de {0}?",
+        "Ter {0} resolveria de verdade o seu problema?"
+      ]
+    },
+    {
+      "pattern": "\\beu quero (.+)",
+      "responses": [
+        "O que significaria para você conseguir {0}?",
+        "Por que você quer {0}?"
+      ]
+    },
+    {
+      "pattern": "\\beu não consigo (.+)",
+      "responses": [
+        "O que impede você de {0}?",
+        "Talvez você consiga {0} se tentar de outro jeito."
+      ]
+    },
+    {
+      "pattern": "\\b(bug|erro|deu ruim|travou|não compila|nao compila)\\b",
+      "responses": [
+        "Bugs fazem você se sentir frustrado?",
+        "Conte mais sobre esse erro. Foi você que o escreveu?",
+        "Você sabia que o primeiro 'bug' registrado foi uma mariposa de verdade, em 1947?"
+      ]
+    },
+    {
+      "pattern": "\\b(código|codigo|programar|programação|programacao|programa)\\b",
+      "responses": [
+        "Qual foi o primeiro código que você escreveu?",
+        "Programar te deixa feliz ou ansioso?",
+        "Fale mais sobre isso. Que linguagem você usava?"
+      ]
+    },
+    {
+      "pattern": "\\b(computador|máquina|maquina|pc|notebook)\\b",
+      "responses": [
+        "Computadores te preocupam?",
+        "Qual foi o seu primeiro computador?",
+        "O que você acha de máquinas que conversam com pessoas?"
+      ]
+    },
+    {
+      "pattern": "\\b(mãe|mae|pai|família|familia|irmão|irmao|irmã|irma)\\b",
+      "responses": [
+        "Fale mais sobre a sua família.",
+        "Alguém da sua família também gosta de tecnologia?"
+      ]
+    },
+    {
+      "pattern": "\\bporque (.+)",
+      "responses": [
+        "Essa é a verdadeira razão?",
+        "Que outras razões poderiam existir?"
+      ]
+    },
+    {
+      "pattern": "\\bvocê é (.+)",
+      "responses": [
+        "Por que você acha que eu sou {0}?",
+        "Gosta de pensar que eu sou {0}?"
+      ]
+    },
+    {
+      "pattern": "^(sim|claro|com certeza)\\b",
+      "responses": [
+        "Você parece bem seguro.",
+        "Entendo. Pode explicar melhor?"
+      ]
+    },
+    {
+      "pattern": "^(não|nao)\\b",
+      "responses": [
+        "Por que não?",
+        "Você está dizendo não só para ser do contra?"
+      ]
+    },
+    {
+      "pattern": "\\?$",
+      "responses": [
+        "Por que você pergunta isso?",
+        "O que você acha?",
+        "Essa pergunta é importante para você?"
+      ]
+    }
+  ],
+  "fallbackResponses": [
+    "Por favor, continue.",
+    "Entendo. Conte mais.",
+    "Como isso faz você se sentir?",
+    "Muito interessante. Pode explicar melhor?",
+    "E o que isso significa para você?"
+  ]
+}

@@ -1,0 +1,172 @@
+/* Cada tema reproduz o "ambiente" típico da época da linguagem. */
+
+.codeWindow .codeEditor,
+.codeWindow .codeOutput {
+  font-family: var(--fontCode);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Cartão perfurado: anos 50 e 60 */
+.theme-punchcard {
+  background: #f3e6c4;
+  border: 1px solid #cdb98b;
+}
+
+.theme-punchcard .codeWindowBar {
+  background: #e4d2a2;
+  color: #5c4a22;
+  font-family: var(--fontCode);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.theme-punchcard .codeEditor {
+  background:
+    repeating-linear-gradient(90deg, transparent 0 calc(1ch - 1px), rgba(92, 74, 34, 0.08) calc(1ch - 1px) 1ch),
+    #f7ecd1;
+  color: #3a2c10;
+  font-family: "Courier New", var(--fontCode);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.theme-punchcard .codeOutput {
+  background: #fffaf0;
+  color: #222;
+  border-top: 3px dashed #cdb98b;
+  font-family: "Courier New", var(--fontCode);
+}
+
+/* Terminal de fósforo verde: anos 60 a 80 */
+.theme-phosphor {
+  background: #020a05;
+  border: 1px solid #0f3b22;
+}
+
+.theme-phosphor .codeWindowBar {
+  background: #06170d;
+  color: var(--colorPhosphor);
+  font-family: var(--fontRetro);
+  font-size: 20px;
+}
+
+.theme-phosphor .codeEditor,
+.theme-phosphor .codeOutput {
+  background: radial-gradient(ellipse at center, #062012 0%, #020a05 100%);
+  color: var(--colorPhosphor);
+  font-family: var(--fontRetro);
+  font-size: 22px;
+  line-height: 1.2;
+  text-shadow: 0 0 5px rgba(57, 255, 136, 0.6);
+  caret-color: var(--colorPhosphor);
+}
+
+.theme-phosphor .codeOutput {
+  border-top: 1px solid #0f3b22;
+}
+
+/* MS-DOS / Turbo: anos 80 e 90 */
+.theme-dos {
+  background: #0000aa;
+  border: 1px solid #5555ff;
+}
+
+.theme-dos .codeWindowBar {
+  background: #aaaaaa;
+  color: #000;
+  font-family: var(--fontRetro);
+  font-size: 20px;
+}
+
+.theme-dos .codeEditor {
+  background: #0000aa;
+  color: #ffff55;
+  font-family: var(--fontRetro);
+  font-size: 22px;
+  line-height: 1.2;
+  caret-color: #ffffff;
+}
+
+.theme-dos .codeOutput {
+  background: #000;
+  color: #c0c0c0;
+  font-family: var(--fontRetro);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+/* Janela clássica: anos 90 */
+.theme-retroWindow {
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  border-radius: 0;
+}
+
+.theme-retroWindow .codeWindowBar {
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.theme-retroWindow .codeEditor {
+  margin: 6px;
+  width: calc(100% - 12px);
+  background: #fff;
+  color: #000;
+  border: 2px solid;
+  border-color: #404040 #ffffff #ffffff #404040;
+  font-family: "Courier New", monospace;
+}
+
+.theme-retroWindow .codeOutput {
+  margin: 0 6px 6px;
+  background: #000;
+  color: #c0c0c0;
+  font-family: "Courier New", monospace;
+}
+
+/* Editor moderno: hoje */
+.theme-modern {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.theme-modern .codeWindowBar {
+  background: #2d2d30;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.theme-modern .codeEditor {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  caret-color: #aeafad;
+}
+
+.theme-modern .codeOutput {
+  background: #181818;
+  color: #cccccc;
+  border-top: 1px solid #333;
+}
+
+.theme-retroWindow .button,
+.theme-punchcard .button {
+  border-radius: 4px;
+}
+
+.theme-retroWindow .buttonGhost {
+  background: #c0c0c0;
+  color: #000;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+}
+
+.theme-punchcard .buttonGhost {
+  background: #f7ecd1;
+  color: #5c4a22;
+  border-color: #cdb98b;
+}

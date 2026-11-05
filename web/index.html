@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Museu da Computação: a evolução da computação, das primeiras máquinas e linguagens até a inteligência artificial.">
+  <title>Museu da Computação · Do passado ao presente</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/codeThemes.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skipLink" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="siteHeader" id="siteHeader">
+    <a class="brand" href="#inicio" aria-label="Museu da Computação, início">
+      <span class="brandPrompt">C:\&gt;</span><span class="brandName">museu<span class="brandCursor">_</span></span>
+    </a>
+    <button class="menuToggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav class="mainNav" id="mainNav" aria-label="Seções do museu">
+      <a href="#linha-do-tempo">Linha do tempo</a>
+      <a href="#antes-e-agora">Antes x Agora</a>
+      <a href="#linguagens">Linguagens</a>
+      <a href="#voce-reconhece">Você reconhece?</a>
+      <a href="#inteligencia-artificial">IA</a>
+      <a href="#mural" class="navHighlight">Mural de Memórias</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="heroText">
+        <p class="eyebrow">Senai FATESG · Engenharia de Software</p>
+        <h1>Museu da <span class="gradientText">Computação</span></h1>
+        <p class="heroLead">Do passado ao presente: um stand de memórias. Das engrenagens de 1642 aos agentes de IA, percorra a evolução da computação, rode linguagens antigas de verdade e deixe a sua história no mural.</p>
+        <div class="heroActions">
+          <a class="button buttonPrimary" href="#linha-do-tempo">Começar o percurso</a>
+          <button class="button buttonGhost" id="dialupButton" type="button">
+            <span class="buttonIcon" aria-hidden="true">▶</span>
+            <span class="buttonLabel">Ouvir a internet discada</span>
+          </button>
+        </div>
+        <ol class="visitPath" aria-label="Percurso da visita">
+          <li><span>01</span> Passado</li>
+          <li><span>02</span> Presente</li>
+          <li><span>03</span> Linguagens</li>
+          <li><span>04</span> IA</li>
+          <li><span>05</span> Sua memória</li>
+        </ol>
+      </div>
+      <div class="crtMonitor" aria-hidden="true">
+        <div class="crtScreen">
+          <pre class="bootLog" id="bootLog"></pre>
+        </div>
+        <div class="crtBase"><span class="crtLed"></span><span>MUSEU-PC 486 DX2</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="linha-do-tempo">
+      <header class="sectionHeader">
+        <span class="sectionNumber">01</span>
+        <div>
+          <h2>Linha do tempo</h2>
+          <p>Mais de três séculos de máquinas, linguagens, redes e inteligência artificial. Filtre por tema e veja como cada ideia abriu caminho para a próxima.</p>
+        </div>
+      </header>
+      <div class="filterChips" id="timelineFilters" role="toolbar" aria-label="Filtrar linha do tempo"></div>
+      <ol class="timeline" id="timelineList" aria-live="polite"></ol>
+
+      <div class="eraVote card" id="eraVote">
+        <div class="eraVoteText">
+          <h3>Onde você entrou nessa história?</h3>
+          <p>Marque a década em que você começou a mexer com computadores e veja de que época vieram os visitantes do museu.</p>
+          <div class="eraButtons" id="eraVoteButtons"></div>
+          <p class="formFeedback" id="eraVoteFeedback" role="status"></p>
+        </div>
+        <div class="barChart" id="eraVoteChart" aria-label="Votos por década"></div>
+      </div>
+    </section>
+
+    <section class="section" id="antes-e-agora">
+      <header class="sectionHeader">
+        <span class="sectionNumber">02</span>
+        <div>
+          <h2>Antes x Agora</h2>
+          <p>Para quem programa, algumas mudanças são inesquecíveis. Compare como era e como é hoje.</p>
+        </div>
+      </header>
+      <div class="comparisonGrid" id="comparisonGrid"></div>
+
+      <div class="beforeAfter card">
+        <div class="beforeAfterHeader">
+          <h3>Tela "Antes e Depois"</h3>
+          <p>Arraste o controle para comparar o Turbo Pascal de 1983 com um editor moderno.</p>
+        </div>
+        <div class="beforeAfterStage" id="beforeAfterStage">
+          <div class="editorScreen modernEditor" aria-label="Editor moderno">
+            <div class="modernTitleBar"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="modernTab">fibonacci.ts</span></div>
+            <div class="modernBody">
+              <div class="modernActivityBar" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <pre class="modernCode"><span class="lineNumber">1</span><span class="tokKeyword">export function</span> <span class="tokFunction">fibonacci</span>(<span class="tokParam">n</span>: <span class="tokType">number</span>): <span class="tokType">number</span>[] {
+<span class="lineNumber">2</span>  <span class="tokKeyword">const</span> sequence = [<span class="tokNumber">0</span>, <span class="tokNumber">1</span>];
+<span class="lineNumber">3</span>  <span class="tokKeyword">while</span> (sequence.<span class="tokProperty">length</span> &lt; n) {
+<span class="lineNumber">4</span>    <span class="tokKeyword">const</span> [a, b] = sequence.<span class="tokFunction">slice</span>(-<span class="tokNumber">2</span>);
+<span class="lineNumber">5</span>    sequence.<span class="tokFunction">push</span>(a + b);<span class="aiGhostText">  // sugestão da IA ⇥</span>
+<span class="lineNumber">6</span>  }
+<span class="lineNumber">7</span>  <span class="tokKeyword">return</span> sequence.<span class="tokFunction">sl</span><span class="caret"></span>
+<span class="lineNumber">8</span>}</pre>
+              <ul class="autocompleteBox" aria-hidden="true">
+                <li class="selected"><span class="kindIcon">ƒ</span>slice<span class="hint">(start?, end?): number[]</span></li>
+                <li><span class="kindIcon">ƒ</span>some</li>
+                <li><span class="kindIcon">ƒ</span>sort</li>
+                <li><span class="kindIcon">ƒ</span>splice</li>
+              </ul>
+            </div>
+            <div class="modernStatusBar"><span>⎇ main</span><span>✓ 0 problemas</span><span>TypeScript</span><span>IA ativa</span></div>
+          </div>
+          <div class="editorScreen turboEditor" id="turboEditor" aria-label="Turbo Pascal">
+            <div class="turboMenu"><span>≡</span><span>File</span><span>Edit</span><span>Search</span><span>Run</span><span>Compile</span><span>Debug</span><span>Options</span><span>Window</span><span>Help</span></div>
+            <div class="turboWindow">
+              <div class="turboWindowTitle">═[■]═════════ FIBO.PAS ═════════1═[↕]═</div>
+<pre class="turboCode">program Fibo;
+var a, b, t, i: integer;
+begin
+  a := 0; b := 1;
+  for i := 1 to 10 do
+  begin
+    writeln(a);
+    t := a + b; a := b; b := t
+  end;
+  readln
+end.</pre>
+            </div>
+            <div class="turboStatus"><span>F1 Help</span><span>F2 Save</span><span>F3 Open</span><span>Alt-F9 Compile</span><span>F9 Make</span><span>F10 Menu</span></div>
+          </div>
+          <div class="beforeAfterDivider" id="beforeAfterDivider" aria-hidden="true"><span>⟷</span></div>
+        </div>
+        <label class="srOnly" for="beforeAfterRange">Posição da comparação</label>
+        <input class="beforeAfterRange" id="beforeAfterRange" type="range" min="0" max="100" value="50">
+        <div class="beforeAfterLabels"><span>1983 · Turbo Pascal</span><span>Hoje · Editor moderno com IA</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="linguagens">
+      <header class="sectionHeader">
+        <span class="sectionNumber">03</span>
+        <div>
+          <h2>Linguagens: o mesmo problema em 70 anos</h2>
+          <p>Os 10 primeiros números de Fibonacci escritos em 13 linguagens, de FORTRAN a Kotlin. BASIC roda de verdade no nosso servidor e JavaScript roda no seu navegador.</p>
+        </div>
+      </header>
+      <div class="languageExplorer">
+        <nav class="languageRail" id="languageRail" aria-label="Escolha uma linguagem"></nav>
+        <article class="languageDetail" id="languageDetail" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section class="section" id="voce-reconhece">
+      <header class="sectionHeader">
+        <span class="sectionNumber">04</span>
+        <div>
+          <h2>Você reconhece?</h2>
+          <p>Trechos que todo programador "das antigas" já viu na tela. Tente lembrar o que é antes de virar o cartão.</p>
+        </div>
+      </header>
+      <div class="recognizeScore" id="recognizeScore" role="status"></div>
+      <div class="recognizeGrid" id="recognizeGrid"></div>
+    </section>
+
+    <section class="section" id="inteligencia-artificial">
+      <header class="sectionHeader">
+        <span class="sectionNumber">05</span>
+        <div>
+          <h2>Inteligência Artificial: de regras a redes neurais</h2>
+          <p>A IA não nasceu com o ChatGPT. Converse com uma IA de 1966 e treine um neurônio artificial de 1958 com as próprias mãos.</p>
+        </div>
+      </header>
+      <ol class="aiTimeline" id="aiTimeline"></ol>
+
+      <div class="aiLabs">
+        <article class="card elizaCard">
+          <header class="labHeader">
+            <span class="labYear">1966</span>
+            <div>
+              <h3>Converse com a ELIZA</h3>
+              <p>Ela roda no nosso back-end em Java com cerca de 20 regras de padrões, exatamente como a original: não entende nada, só reflete o que você diz.</p>
+            </div>
+          </header>
+          <div class="elizaTerminal">
+            <div class="elizaLog" id="elizaLog" aria-live="polite"></div>
+            <form class="elizaForm" id="elizaForm" autocomplete="off">
+              <label class="srOnly" for="elizaInput">Mensagem para a ELIZA</label>
+              <span class="elizaPrompt" aria-hidden="true">&gt;</span>
+              <input id="elizaInput" name="message" maxlength="300" placeholder="Digite e pressione Enter..." required>
+            </form>
+          </div>
+        </article>
+
+        <article class="card perceptronCard">
+          <header class="labHeader">
+            <span class="labYear">1958</span>
+            <div>
+              <h3>Treine um Perceptron</h3>
+              <p>Clique para adicionar pontos de duas classes e veja um único neurônio aprender a separá-los com uma reta. É o ancestral das redes neurais atuais.</p>
+            </div>
+          </header>
+          <canvas class="perceptronCanvas" id="perceptronCanvas" width="520" height="340" aria-label="Área de treino do perceptron"></canvas>
+          <div class="perceptronControls">
+            <div class="segmented" role="radiogroup" aria-label="Classe do próximo ponto">
+              <button type="button" class="segment active" data-point-class="1" role="radio" aria-checked="true"><span class="swatch classA"></span>Classe A</button>
+              <button type="button" class="segment" data-point-class="-1" role="radio" aria-checked="false"><span class="swatch classB"></span>Classe B</button>
+            </div>
+            <button type="button" class="button buttonSmall buttonPrimary" id="perceptronTrain">Treinar</button>
+            <button type="button" class="button buttonSmall buttonGhost" id="perceptronSample">Exemplo</button>
+            <button type="button" class="button buttonSmall buttonGhost" id="perceptronClear">Limpar</button>
+          </div>
+          <p class="perceptronStatus" id="perceptronStatus" role="status">Adicione pontos ou carregue um exemplo.</p>
+        </article>
+      </div>
+
+      <div class="aiEras">
+        <article class="aiEra">
+          <span class="aiEraTag">1956 – 1980</span>
+          <h3>IA simbólica</h3>
+          <p>Pessoas escrevem regras à mão: "se a frase contém <em>eu sinto</em>, pergunte por quê". Funciona em domínios pequenos e quebra fora deles.</p>
+        </article>
+        <article class="aiEra">
+          <span class="aiEraTag">1958 – 2012</span>
+          <h3>Aprendizado de máquina</h3>
+          <p>Em vez de regras, exemplos. O perceptron ajusta pesos sozinho. Faltavam dados e poder de computação para ir longe.</p>
+        </article>
+        <article class="aiEra">
+          <span class="aiEraTag">2012 – hoje</span>
+          <h3>Deep learning e LLMs</h3>
+          <p>Bilhões de neurônios artificiais treinados em GPUs com boa parte da internet. Transformers geram texto, código e imagens, e agentes executam tarefas inteiras.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section muralSection" id="mural">
+      <header class="sectionHeader">
+        <span class="sectionNumber">06</span>
+        <div>
+          <h2>Mural de Memórias</h2>
+          <p>Qual é a sua memória? O primeiro computador, o primeiro código, o disquete que não abria... Cole a sua história no mural.</p>
+        </div>
+      </header>
+      <div class="muralLayout">
+        <form class="card memoryForm" id="memoryForm" novalidate>
+          <fieldset class="guideQuestions">
+            <legend>Precisa de inspiração? Escolha uma pergunta:</legend>
+            <div class="guideQuestionList" id="guideQuestionList"></div>
+          </fieldset>
+          <label class="field">
+            <span class="fieldLabel">Sua memória</span>
+            <textarea id="memoryText" name="text" rows="5" maxlength="280" required placeholder="Ex.: Meu primeiro código foi um 10 PRINT no computador da escola..."></textarea>
+            <span class="charCounter" id="memoryCounter">0/280</span>
+          </label>
+          <div class="fieldRow">
+            <label class="field">
+              <span class="fieldLabel">Época aproximada</span>
+              <select id="memoryEra" name="era" required>
+                <option value="">Selecione...</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="fieldLabel">Nome ou apelido <small>(opcional)</small></span>
+              <input id="memoryAuthor" name="authorName" maxlength="40" placeholder="Anônimo">
+            </label>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="memoryConsent" required>
+            <span>Autorizo exibir esta memória no mural. Não incluí dados pessoais como telefone, e-mail ou endereço.</span>
+          </label>
+          <button class="button buttonPrimary buttonBlock" type="submit" id="memorySubmit">Colar no mural</button>
+          <p class="formFeedback" id="memoryFeedback" role="status"></p>
+        </form>
+
+        <div class="wallArea">
+          <div class="wallToolbar">
+            <div class="filterChips" id="wallFilters" role="toolbar" aria-label="Filtrar memórias por época"></div>
+            <span class="wallCount" id="wallCount"></span>
+          </div>
+          <ul class="memoryWall" id="memoryWall" aria-live="polite"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="siteFooter">
+    <div>
+      <strong>Museu da Computação</strong> · Do passado ao presente: um stand de memórias
+      <p>Senai FATESG · Engenharia de Software · Análise e Projeto de Algoritmos · Prof.ª Carmen</p>
+      <p>Pedro Henrique, Luiza Mel, Kaua Souza e Julia · 2026</p>
+    </div>
+    <p class="footerNote">A computação é feita de tecnologia, mas principalmente de pessoas.</p>
+  </footer>
+</body>
+</html>
